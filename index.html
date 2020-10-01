@@ -269,6 +269,86 @@
                 </div>
               </form>
             </section>
+            <section class="col-12">
+            <hr>
+              <h3>
+                <span>Payment Information</span>
+              </h3>
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" class="custom-control-input">
+                  <label class="custom-control-label" for="credit">Credit Card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="debit" name="paymentMethod" type="radio" class="custom-control-input">
+                  <label class="custom-control-label" for="debit">Debit Card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="gift" name="paymentMethod" type="radio" class="custom-control-input">
+                  <label class="custom-control-label" for="gift">Gift Card</label>
+                </div>
+              </div>
+              <form>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="cc-name">Name on Card</label>
+                    <input type="text" class="form-control" id="cc-name">
+                    <small class="text-secondary">Full Name as Displayed on Card</small>
+                  </div>
+                  <div class="col-6">
+                    <label for="cc-number">Card number</label>
+                    <input type="text" class="form-control" id="cc-number">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-8 mb-2">
+                    <label>Expiration</label>
+                    <div class="row">
+                      <div class="col-6">
+                        <select class="custom-select" id="cc-month">
+                          <option>Choose...</option>
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                        <small for="cc-month">Month</small>
+                      </div>
+                      <div class="col-6">
+                        <select class="custom-select" id="cc-year">
+                          <option>Choose...</option>
+                          <option>2020</option>
+                          <option>2021</option>
+                          <option>2022</option>
+                          <option>2023</option>
+                          <option>2024</option>
+                          <option>2025</option>
+                          <option>2026</option>
+                          <option>2027</option>
+                          <option>2028</option>
+                          <option>2029</option>
+                          <option>2030</option>
+                        </select>
+                        <small for="cc-year">Year</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label for="cc-cvv">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv">
+                  </div>
+                </div>
+              </form>
+            <hr>
+            </section>
           </div>
         </div>
       </div>
