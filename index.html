@@ -34,7 +34,7 @@
         <!-- https://getbootstrap.com/docs/4.0/layout/grid/ -->
         <div class="container">
           <div class="row d-flex">
-            <section class="col-sm-12 order-sm-1 col-md-4 order-md-2 p-2">
+            <section id="cart" class="col-sm-12 order-sm-1 col-md-4 order-md-2 p-2">
               <!-- https://getbootstrap.com/docs/4.4/utilities/flex/ -->
               <h3 class="d-flex justify-content-between">
                 <span>Your Cart</span>
@@ -129,9 +129,9 @@
                 </div>
               </form>
             </section>
-            <section  class="col-sm-12 order-sm-2 col-md-8 order-md-1 p-2">
+            <section id="Information" class="col-sm-12 order-sm-2 col-md-8 order-md-1 p-2">
               <form class="needs-validation" novalidate>
-                <section>
+                <section id="shippingAddress">
                   <h3>
                     <span>Shipping Address</span>
                   </h3>
@@ -226,12 +226,12 @@
                     </div>
                   </div>
                 </section>
-                <section>
+                <section id="checks">
                 <hr>
                 <div class="form-group">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="same-address">
-                    <label class="custom-control-label" for="same-address">
+                    <label class="custom-control-label" for="same-address" onclick="update()">
                       Billing Address Is The Same As My Billing Address
                     </label>
                   </div>
@@ -242,9 +242,9 @@
                     </label>
                   </div>
                 </div>
-                <hr>
                 </section>
-                <section>
+                <section id="billingAddress">
+                  <hr>
                   <h3>
                     <span>Billing Address</span>
                   </h3>
@@ -327,7 +327,7 @@
                     </div>
                   </div>
                 </section>
-                <section>
+                <section id="paymentInformation">
                 <hr>
                   <h3>
                     <span>Payment Information</span>
@@ -423,7 +423,7 @@
                   </div>
                 <hr>
                 </section>
-                <section>
+                <section id="Checkout">
                   <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to Checkout</button>
                 </section>
               </form>
@@ -457,6 +457,18 @@
     </footer>
 
     <!-- Optional JavaScript -->
+    <script>
+      function update() {
+        var checkBox = document.getElementById("same-address");
+        var text = document.getElementById("billingAddress");
+        if (checkBox.checked == true){
+          text.style.display = "block";
+        } else {
+           text.style.display = "none";
+        }
+      }
+    </script>
+
     <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function() {
